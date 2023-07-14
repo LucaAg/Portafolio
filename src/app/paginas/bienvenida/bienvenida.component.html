@@ -1,0 +1,19 @@
+<body>
+    <div class="pantalla">
+        <div class="contenedor-lenguajes">
+            <p>Lenguajes</p>
+        </div>
+        <div class="contenedor-cv-cont">
+            <div class="contribuciones">
+                <p>Contribuciones</p>
+            </div>
+            <div class="contenedor-cv">
+                <p>OBTENER CURRICULUM VITAE (CV)</p>
+                <button (click)="descargarCV()">Descargar CV</button>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-spinner" *ngIf="spinner">
+        <app-spinner></app-spinner>
+    </div>
+</body>

@@ -1,0 +1,19 @@
+<body>
+    <div class="pantalla" *ngIf="miPerfil" >
+        <section class="box" [@entrarIzqADer]>
+            <img src="{{ miPerfil.avatar_url }}" width="140" class="avatar"/>
+            <h1>LUCA NAHUEL AGNOLI</h1>
+            <h2>Desarrollador FullStack</h2>
+            <div class="contendor-p">
+                <p>Repositorios públicos: {{miPerfil.public_repos}}</p>
+                <p>Soy Luca Nahuel Agnoli. Soy Técnico en Programación, graduado en la Universidad Técnologica Nacional (UTN). 
+                    Busco poder aprender y aplicar los conocimientos ya adquiridos, y los que seguiré aprendiendo.</p>
+            </div>
+        </section>
+    </div>
+    <div class="contenedor-spinner" *ngIf="spinner">
+        <app-spinner></app-spinner>
+    </div>
+</body>
+    
+
