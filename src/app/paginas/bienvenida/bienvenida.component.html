@@ -1,17 +1,64 @@
 <body>
     <div class="pantalla">
         <div class="contenedor-lenguajes">
-            <p>Lenguajes</p>
+            <div class="selecciones" (mouseenter)="onEntraMouse('frames')" (mouseleave)="onSaleMouse('frames')">
+                Frameworks
+            </div>
+            <div class="selecciones" (mouseenter)="onEntraMouse('lenguajes')" (mouseleave)="onSaleMouse('lenguajes')">
+                Lenguajes
+            </div>
+            <div class="selecciones" (mouseenter)="onEntraMouse('estilos')" (mouseleave)="onSaleMouse('estilos')"> 
+                Maquetados y estilos
+            </div>
+            <div class="selecciones" (mouseenter)="onEntraMouse('base-datos')" (mouseleave)="onSaleMouse('base-datos')">
+                Base de datos
+            </div>
+            <div class="selecciones" (mouseenter)="onEntraMouse('otros')" (mouseleave)="onSaleMouse('otros')">
+                Otros
+            </div>
+            <div class="datos-mostrados">
+                <div id="no-data">
+                    <p>Mantenga el cursor sobre los datos que quiera ver</p>
+                </div>
+                <div id="frameworks" class="esconder">
+                    <img src="../../../assets/bienvenida/frameworks/angular.png" alt="Imagén Angular">
+                    <img src="../../../assets/bienvenida/frameworks/ionic.png" alt="Imagén Ionic">
+                    <img src="../../../assets/bienvenida/frameworks/net.png" alt="Imagén .NET">
+                </div>
+                <div id="lenguajes" class="esconder">
+                    <img src="../../../assets/bienvenida/lenguajes/CSharp.png" alt="Imagén C#">
+                    <img src="../../../assets/bienvenida/lenguajes/C.png" alt="Imagén C">
+                    <img src="../../../assets/bienvenida/lenguajes/js.png" alt="Imagén Javascript">
+                    <img src="../../../assets/bienvenida/lenguajes/Ts.png" alt="Imagén Typescript">
+                    <img src="../../../assets/bienvenida/lenguajes/php.png" alt="Imagén PHP">
+                </div>
+                <div id="estilos" class="esconder">
+                    <img src="../../../assets/bienvenida/estilos/bootstrap.png" alt="Imagén Bootstrap">
+                    <img src="../../../assets/bienvenida/estilos/css.png" alt="Imagén CSS3">
+                    <img src="../../../assets/bienvenida/estilos/html.png" alt="Imagén HTML5">
+                </div>
+                <div id="base-datos" class="esconder">
+                    <img src="../../../assets/bienvenida/base de datos/firebase.png" alt="Imagén Firebase">
+                    <img src="../../../assets/bienvenida/base de datos/sql.png" alt="Imagén SQL">
+                    <img src="../../../assets/bienvenida/base de datos/sqlServer.png" alt="Imagén Sql Server">
+                </div>
+                <div id="otros" class="esconder">
+                    <img src="../.././../assets/bienvenida/otros/arduino.png" alt="Imagén Arduino">
+                    <img src="../../../assets/bienvenida/otros/git.png" alt="Imagén Git">
+                    <img src="../../../assets/bienvenida/otros/postman.png" alt="Imagén Postman">
+                </div>
+            </div>
         </div>
         <div class="contenedor-cv-cont">
             <div class="contribuciones">
-                <p>Contribuciones</p>
+                <img src="https://github-readme-stats.vercel.app/api?username=LucaAg&show_icons=true&theme=radical" alt="">
             </div>
             <div class="contenedor-cv">
                 <p>OBTENER CURRICULUM VITAE (CV)</p>
                 <button (click)="descargarCV()">Descargar CV</button>
             </div>
-        </div>
+            <p>© 2023 Copyright: Luca Nahuel Agnoli</p>
+        </div>    
     </div>
     <div class="contenedor-spinner" *ngIf="spinner">
         <app-spinner></app-spinner>
