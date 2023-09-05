@@ -10,6 +10,7 @@ import { BienvenidaComponent } from './paginas/bienvenida/bienvenida.component';
 import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpinnerComponent } from './componentes/spinner/spinner.component';
+import { ProyectosComponent } from './paginas/proyectos/proyectos.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SpinnerComponent } from './componentes/spinner/spinner.component';
     NavBarComponent,
     BienvenidaComponent,
     ContactoComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,

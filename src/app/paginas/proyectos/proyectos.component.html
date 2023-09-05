@@ -1,0 +1,58 @@
+<body>
+    <div class="pantalla">
+        <div class="contenido-proyectos">
+            <div class="boton-izq" (click)="cambiarVistaProyecto('izq')">
+                <button></button>
+            </div>
+            <div class="contenedor-proyectos">
+                <h2>{{titulo}}</h2>
+                <div class="proyecto" id="0">
+                    <div class="descripcion" >
+                        Página web creada para un proyecto universitario. Tiene un sistema de registro e inicio de sesión en donde el usuario
+                        puede interactuar con los juegos y acumular nuevos puntajes. Los juegos fueron creados por mí.
+                        <a target="_blank" href="https://sala-de-juegos-lucaag.netlify.app/">Acceder a la sala</a>
+                        <span>TECNOLOGIAS: Angular | HTML | CSS | NoSQL</span>
+                        <img class="imagenes-proyectos" [src]="rutasImaganesSala[indiceImagen]" alt="Imagén proyecto">
+                    </div>
+                </div>
+                <!-- IMA -->
+                <div class="proyecto ocultar" id="1">
+                    <div class="descripcion" >
+                        Obra social ficticia creada para un proyecto universatario. Se realiza un CRUD para la manipulación de usuarios cargados
+                        en la base de datos.
+                        <a (click)="descargarPDF()">Descargar PDF</a>
+                        <span>TECNOLOGIAS: C# | Windows Form | .NET en Visual Studio | SQL</span>
+                        <img class="imagenes-proyectos" [src]="rutasImagenesIMA[indiceImagen]" alt="Imagén proyecto" >
+                    </div>
+                </div>
+                <!-- BIANLUCA -->
+                <div class="proyecto ocultar" id="2">
+                    <div class="descripcion" >
+                        Aplicación para el celular de un restaurante fictiocio creado para la universidad. Se simula un proceso de pedidos de comida observando todos sus estados.
+                        Se puede interactuar mediante distintos tipos de usuario. 
+                        <span>TECNOLOGIAS: Ionic | Typescript| HTML | CSS | NoSQL</span>
+                        <img class="imagenes-proyectos" [src]="rutasImagenesBianluca[indiceImagen]" alt="Imagén proyecto" >
+                    </div>
+                </div>
+                <div class="proyecto ocultar" id="3">
+                    <div class="descripcion" >
+                        Clinica ficticia creada para un proyecto de la facultad. Se puede ingresar como distintos usuarios, los cuales tienen distintas opciones. Se maneja
+                        los turnos para los pacientes y los horarios para los especialistas entre otras cosas. 
+                        <a target="_blank" href="https://agnoli-luca-clinica-online.netlify.app/">Acceder a la clinica</a>
+                        <span>TECNOLOGIAS: Angular | HTML | CSS | NoSQL</span>
+                        <img class="imagenes-proyectos" [src]="rutasImagenesClinica[indiceImagen]" alt="Imagén proyecto" >
+                    </div>
+                </div>
+            </div>
+            <div class="boton-der" (click)="cambiarVistaProyecto('der')">
+                <button></button>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023 Copyright: Luca Nahuel Agnoli</p>
+        </div>
+    </div>
+    <div class="contenedor-spinner" *ngIf="spinner">
+        <app-spinner></app-spinner>
+    </div>
+</body>

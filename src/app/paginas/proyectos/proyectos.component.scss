@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.pantalla
+{
+    background-image: url('../../../assets/fondo.png'); 
+    background-size: cover;
+    height: calc(100vh - 80px);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(247, 176, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pantalla .contenido-proyectos
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pantalla .contenedor-proyectos
+{
+    border: 0.125em solid black;
+    width: 70%;
+    height: 30em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border: 0.375em solid rgb(231, 173, 173);
+    border-radius: 0.625em;
+    margin-top: 5%;
+}
+
+
+.pantalla .boton-izq,
+.pantalla .boton-der
+{
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pantalla .boton-izq button,
+.pantalla .boton-der button
+{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    margin-top: 1em;
+    background: transparent;
+    border: none;
+}
+
+.pantalla .boton-izq button
+{
+    background-image: url(../../../assets/proyectos/izq.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.pantalla .boton-der button
+{
+    background-image: url(../../../assets/proyectos/derecha.png);
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+.pantalla .contenedor-proyectos h2
+{
+    text-align: center;
+    color: rgb(207, 105, 119);
+}
+
+/* PROYECTOS */
+.pantalla .contenedor-proyectos .proyecto
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pantalla .contenedor-proyectos .proyecto .descripcion
+{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+
+
+
+.pantalla .contenedor-proyectos .proyecto .descripcion span
+{
+    color: rgb(255, 253, 159);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+.pantalla .contenedor-proyectos .proyecto .descripcion a
+{
+    color:rgb(207, 105, 119);
+    text-decoration: underline;
+}
+
+
+.imagenes-proyectos
+{
+    width: 100%; /* El ancho será el 100% del contenedor padre */
+    max-width: 40.625em; /* Establece un ancho máximo */
+    height: auto; /* La altura se ajustará automáticamente según el ancho */
+    max-height: 20.313em;
+    padding: 2%; /* Utiliza un porcentaje para el relleno */
+    border-radius: 3vw; /* Utiliza unidades vw para el borde redondeado (ajustable según tus preferencias) */
+}
+
+.pantalla .contenedor-proyectos .ocultar
+{
+    display: none;
+}
+
+.pantalla .contenedor-proyectos .proyecto .descripcion
+{
+    text-align: center;
+}
+
+
+
+/********************************************/
+
+
+
+/* COPYRIGHT */
+.copyright
+{
+    margin-bottom: 0.6em;
+} 
+
+
+/* SPINNER */
+
+.contenedor-spinner
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 57, 57, 0.4);
+    backdrop-filter: blur(3px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
