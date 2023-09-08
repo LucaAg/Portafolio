@@ -20,7 +20,7 @@ nav{
     top: 0;
     left: 0;
     width: 100%;
-    height: 4.375rem;
+    height: 5vw;
     background: rgb(207, 105, 119);
     padding: 0 6.25rem;
     box-sizing: border-box;
@@ -40,8 +40,8 @@ nav .brand
 
 nav div img
 {
-    width: 40px;
-    padding: 15px;
+    width: 3vw;
+    padding: 1vw;
 }
 
 nav .brand h2
@@ -132,10 +132,25 @@ nav ul li:before {
   }
 
   @media (max-width: 1120px) {
-    /* Estilos para dispositivos con un ancho máximo de 768px */
     nav{
       padding: 0 3.8rem;
     }
+
+    nav ul li:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to right, rgb(247, 90, 85) 0%, rgb(247, 90, 85) 50%, rgb(247, 90, 85) 100%, transparent 50%);
+      transition: left 0.3s ease;
+    }
+    
+    nav ul li:hover:before {
+      left: 0;
+    }
+  
 
     button
     {
