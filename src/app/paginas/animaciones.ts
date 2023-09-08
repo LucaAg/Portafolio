@@ -1,4 +1,4 @@
-import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
+import {trigger, state, style, transition, animate} from '@angular/animations';
 
 
 export const deslizarIzqADerAnimacion = trigger('entrarIzqADer', [
@@ -18,3 +18,15 @@ export const bounceIn = trigger('bounceIn', [
       style({ transform: 'translateY(0)', opacity: 1 }))
   ])
 ]);
+
+
+export const fadeInOut =  trigger('fadeInOut', [
+  transition(':increment', [
+    style({ opacity: 0, transform: 'translateX(20px)' }),
+    animate('1000ms ease-in-out', style({ opacity: 1, transform: 'translateX(0)' })),
+  ]),
+  transition(':decrement', [
+    style({ opacity: 0, transform: 'translateX(-20px)' }),
+    animate('1000ms ease-in-out', style({ opacity: 1, transform: 'translateX(0)' })),
+  ]),
+])

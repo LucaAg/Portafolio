@@ -22,6 +22,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .pantalla .contenido-proyectos
@@ -61,8 +62,8 @@
 .pantalla .boton-izq button,
 .pantalla .boton-der button
 {
-    width: 8em;
-    height: 8em;
+    width: 18vh;
+    height: 18vh;
     border-radius: 50%;
     margin-top: 1em;
     background: transparent;
@@ -81,7 +82,6 @@
     background-image: url(../../../assets/proyectos/derecha.png);
     background-size: cover;
     cursor: pointer;
-
 }
 
 .pantalla .contenedor-proyectos h2
@@ -129,12 +129,22 @@
 
 .imagenes-proyectos
 {
-    width: 100%; /* El ancho será el 100% del contenedor padre */
-    max-width: 40.625em; /* Establece un ancho máximo */
-    height: auto; /* La altura se ajustará automáticamente según el ancho */
+    width: 100%; 
+    max-width: 40.625em; 
+    height: auto;
     max-height: 20.313em;
-    padding: 2%; /* Utiliza un porcentaje para el relleno */
-    border-radius: 3vw; /* Utiliza unidades vw para el borde redondeado (ajustable según tus preferencias) */
+    padding: 2%; 
+    border-radius: 3vw; 
+}
+
+.imagenes-proyectos-bianluca
+{
+    width: 30%; 
+    max-width: 40.625em; 
+    height: auto;
+    max-height: 20.313em;
+    padding: 2%; 
+    border-radius: 3vw;
 }
 
 .pantalla .contenedor-proyectos .ocultar
@@ -157,6 +167,7 @@
 .copyright
 {
     margin-bottom: 0.6em;
+    color: white;
 } 
 
 
@@ -173,4 +184,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99999;
+}
+
+
+/******************************************************/
+
+@media screen and (max-width: 1050px)
+{
+    .pantalla .boton-izq button,
+    .pantalla .boton-der button
+    {
+        width: 10vh;
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 650px)
+{
+    .pantalla .boton-izq button,
+    .pantalla .boton-der button
+    {
+        width: 6vh;
+        height: 6vh;
+    }
 }

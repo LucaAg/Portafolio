@@ -1,10 +1,12 @@
 import { Component, OnInit  } from '@angular/core';
 import { interval } from 'rxjs';
+import { fadeInOut } from '../animaciones';
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.scss']
+  styleUrls: ['./proyectos.component.scss'],
+  animations: [fadeInOut]
 })
 export class ProyectosComponent {
 
@@ -12,6 +14,7 @@ export class ProyectosComponent {
   indiceProyecto = 0;
   titulo = "SALA DE JUEGOS";
   spinner:boolean = false;
+  spinnerProyectos:boolean = false;
 
   idSalaJuego:any;
   idIMA:any;
@@ -107,6 +110,14 @@ export class ProyectosComponent {
     },2000);
   }
 
+  activarSpinnerProyectos()
+  {
+    this.spinnerProyectos = true;
+    setTimeout(()=>{
+      this.spinnerProyectos = false;
+    },2000);
+  }
+
   cambiarImageDinamicamente(ruta:any)
   {
     this.indiceImagen = (this.indiceImagen + 1) % ruta.length;
@@ -114,6 +125,7 @@ export class ProyectosComponent {
 
   cambiarVistaProyecto(direccion:string)
   {
+    this.activarSpinnerProyectos();
     if(direccion == 'izq')
     {
       if(this.indiceProyecto == 0)

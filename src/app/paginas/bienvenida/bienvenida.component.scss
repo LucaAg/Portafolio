@@ -21,6 +21,11 @@
     width: 100%;
 }
 
+.pantalla .contenedor-cv-cont p
+{
+    color: white;
+}
+
 body div .contenedor-lenguajes
 {
     border: 0.125em solid black;
@@ -55,6 +60,7 @@ body div .contenedor-cv-cont .contenedor-cv
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 5px;
 }
 
 body div .contenedor-cv-cont .contenedor-cv button

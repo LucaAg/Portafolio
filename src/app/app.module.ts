@@ -11,6 +11,7 @@ import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpinnerComponent } from './componentes/spinner/spinner.component';
 import { ProyectosComponent } from './paginas/proyectos/proyectos.component';
+import { SpinnerProyectosComponent } from './componentes/spinner-proyectos/spinner-proyectos.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProyectosComponent } from './paginas/proyectos/proyectos.component';
     BienvenidaComponent,
     ContactoComponent,
     SpinnerComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    SpinnerProyectosComponent
   ],
   imports: [
     BrowserModule,
