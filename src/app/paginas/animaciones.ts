@@ -22,11 +22,11 @@ export const bounceIn = trigger('bounceIn', [
 
 export const fadeInOut =  trigger('fadeInOut', [
   transition(':increment', [
-    style({ opacity: 0, transform: 'translateX(20px)' }),
-    animate('1000ms ease-in-out', style({ opacity: 1, transform: 'translateX(0)' })),
+    style({ opacity: 0.2, transform: 'translateX(20px)' }),
+    animate('1000ms ease-in-out', style({ opacity: 0.7, transform: 'translateX(0)' })),
   ]),
   transition(':decrement', [
-    style({ opacity: 0, transform: 'translateX(-20px)' }),
-    animate('1000ms ease-in-out', style({ opacity: 1, transform: 'translateX(0)' })),
+    style({ opacity: 0.2, transform: 'translateX(-20px)' }),
+    animate('1000ms ease-in-out', style({ opacity: 0.7, transform: 'translateX(0)' })),
   ]),
 ])

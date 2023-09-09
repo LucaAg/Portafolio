@@ -68,6 +68,7 @@ export class ProyectosComponent {
       switch(this.indiceProyecto)
       {
         case 0:
+          this.titulo = "SALA DE JUEGOS";
           this.cambiarImageDinamicamente(this.rutasImaganesSala);
           this.idSalaJuego.classList.remove('ocultar');
           this.idIMA.classList.add('ocultar');
@@ -91,7 +92,7 @@ export class ProyectosComponent {
           this.idClinica.classList.add('ocultar');
           break;
         case 3:
-          this.titulo = "Clinica Online";
+          this.titulo = "Clínica Online";
           this.cambiarImageDinamicamente(this.rutasImagenesBianluca);
           this.idSalaJuego.classList.add('ocultar');
           this.idIMA.classList.add('ocultar');

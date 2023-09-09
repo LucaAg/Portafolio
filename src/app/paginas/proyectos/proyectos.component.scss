@@ -39,9 +39,10 @@
 {
     border: 0.125em solid black;
     width: 70%;
-    height: 30em;
+    height: 80%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 5px;
     align-items: center;
     flex-direction: column;
     border: 0.375em solid rgb(231, 173, 173);
@@ -68,6 +69,13 @@
     margin-top: 1em;
     background: transparent;
     border: none;
+    transition: transform 0.2s ease;
+}
+
+.pantalla .boton-izq button:hover,
+.pantalla .boton-der button:hover
+{
+    transform: scale(1.1); 
 }
 
 .pantalla .boton-izq button
@@ -94,7 +102,7 @@
 .pantalla .contenedor-proyectos .proyecto
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -117,32 +125,29 @@
     color: rgb(255, 253, 159);
     font-weight: bold;
     letter-spacing: 1.5px;
-    font-size: 20px;
+    font-size: 150%;
 }
 
 .pantalla .contenedor-proyectos .proyecto .descripcion a
 {
     color:rgb(207, 105, 119);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 
 .imagenes-proyectos
 {
-    width: 100%; 
-    max-width: 40.625em; 
-    height: auto;
-    max-height: 20.313em;
+    width: 100vh; 
+    height: 50vh;
     padding: 2%; 
     border-radius: 3vw; 
 }
 
 .imagenes-proyectos-bianluca
 {
-    width: 30%; 
-    max-width: 40.625em; 
-    height: auto;
-    max-height: 20.313em;
+    width: 50vh; 
+    height: 50vh;
     padding: 2%; 
     border-radius: 3vw;
 }
@@ -189,6 +194,7 @@
 
 /******************************************************/
 
+
 @media screen and (max-width: 1050px)
 {
     .pantalla .boton-izq button,
@@ -197,14 +203,38 @@
         width: 10vh;
         height: 10vh;
     }
+
+    .imagenes-proyectos
+    {
+        width: 70vh; 
+        height: 35vh;
+    }
+
+    .imagenes-proyectos-bianluca
+    {
+        width: 40vh; 
+        height: 40vh;
+    }
 }
 
-@media screen and (max-width: 650px)
+@media screen and (max-width: 670px)
 {
     .pantalla .boton-izq button,
     .pantalla .boton-der button
     {
         width: 6vh;
         height: 6vh;
+    }
+
+    .imagenes-proyectos
+    {
+        width: 50vh; 
+        height: 25vh;
+    }
+
+    .imagenes-proyectos-bianluca
+    {
+        width: 25vh; 
+        height: 25vh;
     }
 }

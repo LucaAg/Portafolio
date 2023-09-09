@@ -71,7 +71,15 @@ body div .contenedor-cv-cont .contenedor-cv button
     border-radius: 1.563em;
     background-color: rgb(207, 105, 119);
     cursor: pointer;
-    color:rgb(231, 173, 173);
+    color:rgb(250, 241, 241);
+    letter-spacing: 1px;
+    font-size: 1.2vw;
+    transition: transform 0.2s ease;
+}
+
+body div .contenedor-cv-cont .contenedor-cv button:hover
+{
+    transform: scale(1.1);
 }
 
 body div .contenedor-cv-cont .contribuciones

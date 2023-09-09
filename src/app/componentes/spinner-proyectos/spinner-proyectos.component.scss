@@ -6,55 +6,37 @@
   justify-content: center;
   align-items: center;
 }
-.spinner{
-    position: absolute;
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    box-sizing: border-box;
-    background: #fff;
-    border: 8px solid #CF6977;
-    overflow: hidden;
-    box-sizing: border-box;
+.spinner {
+  width: 150px;
+  height: 150px;
+  background-color: #CF6977;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
+    0 5px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.spinner:before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 45%;
+  top: -40%;
+  background-color: #fff;
+  animation: wave 5s linear infinite;
+}
+.spinner:before {
+  border-radius: 30%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: wave 5s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0);
   }
-  .spinner::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: -50%;
-    width: 100%;
-    height: 100%;
-    background: #eebac1 ;
-    z-index: 5;
-    border-bottom: 8px solid #da2f45;
-    box-sizing: border-box;
-    animation: eyeShade 3s infinite;
+  100% {
+    transform: rotate(360deg);
   }
-  .spinner::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    bottom: 15px;
-    width: 32px;
-    z-index: 2;
-    height: 32px;
-    background: #ac041b;
-    border-radius: 50%;
-    animation: eyeMove 3s infinite;
-  }
-  @keyframes eyeShade {
-    0%   { transform: translateY(0)}
-    20%   { transform: translateY(5px)}
-    40% , 50%   { transform: translateY(-5px)}
-    60%   { transform: translateY( -8px)}
-    75%   { transform: translateY( 5px)}
-    100%   { transform: translateY(10px)}
-  }
-  @keyframes eyeMove {
-    0%   { transform: translate(0 , 0)}
-    20%   { transform: translate(0px , 5px)}
-    40% , 50%   { transform: translate(0px , -5px)}
-    60%   { transform: translate(-10px , -5px)}
-    75%   { transform: translate(-20px , 5px)}
-    100%   { transform: translate(0 , 10px)}
-  }
+}
